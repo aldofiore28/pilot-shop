@@ -1,0 +1,18 @@
+{{#each products}}
+    <article>
+        <img src="{{this.image}}" />
+        <h6>{{this.name}}</h6>
+        <p>{{this.desc}}</p>
+        <p>
+            From:
+            <span class="price"> £{{this.price}}</span>
+            {{#if discount}}
+            <span class="oldPrice">£{{this.originalPrice}}</span>
+            {{/if}}
+        </p>
+        {{#if discount}}
+        <span class="red-icon">NEW</span>
+        <span class="discount">-{{this.discount}}%</span>
+        {{/if}}
+    </article>
+{{/each}}
